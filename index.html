@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Balance — Concept Showcase</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Shared Top Navigation (Artboard 1 & 2) -->
+  <header class="site-header" id="top-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="#artboard-1" class="brand-logo" aria-label="New Balance Home">
+          <img src="assets/nb-logo-black.png" alt="New Balance Logo" class="nav-logo-img" />
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle Navigation">
+          ☰
+        </button>
+
+        <nav id="primary-nav" class="primary-nav" aria-label="Main Navigation">
+          <ul>
+            <li><a href="#artboard-1">New</a></li>
+            <li><a href="#artboard-2">Men</a></li>
+            <li><a href="#artboard-2">Women</a></li>
+            <li><a href="#artboard-2">kids</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="nav-right">
+        <button class="icon-btn" id="search-sim-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="10.5" cy="10.5" r="7" />
+            <line x1="15.8" y1="15.8" x2="21" y2="21" />
+          </svg>
+        </button>
+        <button class="icon-btn" id="account-sim-btn" aria-label="User Account">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="7.5" r="4" />
+            <path d="M4.5 21c0-4.2 3.4-7 7.5-7s7.5 2.8 7.5 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN ONE-PAGE EXPERIENCE (Artboards 1, 2, 3) -->
+  <main id="main-landing-view">
+
+    <!-- ARTBOARD 1: Hero Section -->
+    <section id="artboard-1" class="hero-section" aria-label="Hero Banner">
+      <div class="hero-inner">
+        <div class="hero-media">
+          <!-- Interaction #1 (Cream Glow on Hover) + Interaction #6 (Click to Zoom) -->
+          <img
+            src="assets/hero-athlete.png"
+            alt="Athlete holding white New Balance basketball sneakers with a basketball over shoulder"
+            class="hero-img cream-glow-hover zoomable-img"
+            tabindex="0"
+            role="button"
+            data-caption="When Struggling, Find Your Balance, A New Balance"
+          />
+        </div>
+        <div class="hero-copy">
+          <h1>
+            WHEN<br />
+            STRUGGLING, FIND<br />
+            YOUR BALANCE, A<br />
+            NEW BALANCE
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTBOARD 2: 3-Column Footwear Showcase -->
+    <section id="artboard-2" class="products-section" aria-label="Featured Footwear">
+      <div class="products-grid">
+        <!-- Column 1 -->
+        <article class="product-card">
+          <h2 class="product-title">New Balance Unisex 9060R<br />Mens Sneakers</h2>
+          <div class="product-img-box">
+            <img
+              src="assets/shoe-9060r.png"
+              alt="New Balance Unisex 9060R Black and White Sneakers"
+              class="product-img zoomable-img"
+              tabindex="0"
+              role="button"
+              data-caption="New Balance Unisex 9060R Mens Sneakers — $160"
+            />
+            <p class="product-price">$160</p>
+          </div>
+        </article>
+
+        <!-- Column 2 -->
+        <article class="product-card">
+          <h2 class="product-title">New BALANCE 530</h2>
+          <div class="product-img-box">
+            <img
+              src="assets/shoe-530.png"
+              alt="New Balance 530 White and Silver Sneakers"
+              class="product-img zoomable-img"
+              tabindex="0"
+              role="button"
+              data-caption="New BALANCE 530 — $109–$126"
+            />
+            <p class="product-price">$109–$126</p>
+          </div>
+        </article>
+
+        <!-- Column 3 -->
+        <article class="product-card">
+          <h2 class="product-title">New Balance 9060</h2>
+          <div class="product-img-box">
+            <img
+              src="assets/shoe-9060.png"
+              alt="New Balance 9060 Grey and Black Sneakers"
+              class="product-img zoomable-img"
+              tabindex="0"
+              role="button"
+              data-caption="New Balance 9060 — $118–$160"
+            />
+            <p class="product-price">$118–$160</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ARTBOARD 3: Brand Banner & Footer -->
+    <section id="artboard-3" class="footer-section" aria-label="Brand Statement and Links">
+      <div class="tagline-strip">
+        <p>Discover the perfect blend of timeless style, quality, and performance. Shop New Balance shoes, sneakers, and athletic wear.</p>
+      </div>
+
+      <div class="footer-dark">
+        <div class="footer-grid">
+          <!-- Left Column: Our Purpose (Interaction #4: Opens Artboard 4 in new tab; Excluded from Interaction #6 zoom) -->
+          <div class="footer-col">
+            <h3>Our purpose</h3>
+            <a
+              href="index.html?view=artboard4"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-trigger-link"
+              aria-label="Open Our Purpose page in a new tab"
+            >
+              <img
+                src="assets/our-purpose.jpg"
+                alt="Street style New Balance sneakers standing near a colorful mural"
+                class="purpose-thumb no-zoom"
+              />
+            </a>
+          </div>
+
+          <!-- Center Column: Gallery / Red NB Logo (Interaction #2: Opens Artboard 5 in new tab; Excluded from Interaction #6 zoom) -->
+          <div class="footer-col">
+            <h3>Gallary</h3>
+            <a
+              href="index.html?view=artboard5"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-trigger-link"
+              aria-label="Open Shoe Gallery in a new tab"
+            >
+              <img
+                src="assets/nb-logo-red.png"
+                alt="Red New Balance Logo linking to Gallery"
+                class="red-nb-logo-img no-zoom"
+              />
+            </a>
+          </div>
+
+          <!-- Right Column: Fearlessly Independent Statement -->
+          <div class="footer-col footer-manifesto">
+            <h3 class="serif-italic">FEARLESSLY INDEPENDENT</h3>
+            <p>Independent since 1906,</p>
+            <p>we empower people through sport</p>
+            <p>and craftsmanship to create positive</p>
+            <p>change in communities around the world.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ARTBOARD 4 VIEW (Opened in a new tab via ?view=artboard4) -->
+  <section id="artboard-4-view" class="standalone-view hidden" aria-label="Our Purpose Statement">
+    <div class="artboard4-container">
+      <div class="artboard4-logo">
+        <img src="assets/nb-logo-red-whitebg.png" alt="Red New Balance Logo" class="artboard4-logo-img" />
+      </div>
+      <div class="artboard4-copy">
+        <p>
+          Our mission reflects over a century of independent craftsmanship and dedication to athletic
+          excellence. We believe movement and sport bring communities together through fairness,
+          mutual respect, and open opportunity for everyone. By expanding access to active lifestyles
+          and local youth programs, our athletes, team members, and partners work together to spark
+          lasting positive impact around the globe.
+        </p>
+      </div>
+      <a href="index.html" class="back-home-btn">← Return to Main Page</a>
+    </div>
+  </section>
+
+  <!-- ARTBOARD 5 VIEW (Opened in a new tab via ?view=artboard5) -->
+  <section id="artboard-5-view" class="standalone-view hidden" aria-label="Sneaker History Gallery">
+    <div class="artboard5-container">
+      <header class="artboard5-header">
+        <a href="index.html" class="back-home-btn dark-btn">← Back to Main</a>
+        <div class="artboard5-logo">
+          <img src="assets/nb-logo-red.png" alt="Red New Balance Logo" class="artboard5-logo-img" />
+        </div>
+      </header>
+
+      <!-- Staggered 3-Card Gallery (Interaction #5 Hover Details + Interaction #6 Click Zoom) -->
+      <div class="staggered-gallery">
+        <!-- Card 1 (Top Left) -->
+        <figure class="gallery-card card-top" tabindex="0">
+          <img
+            src="assets/gallery-530.jpg"
+            alt="New Balance 530 White and Silver"
+            class="gallery-img zoomable-img"
+            data-caption="New Balance 530 — Originally introduced in 1992 as a performance runner, revived as an everyday classic featuring ABZORB cushioning."
+          />
+          <figcaption class="shoe-history-overlay">
+            <h4>New Balance 530 (1992)</h4>
+            <p>Originally engineered in 1992 as a high-mileage performance runner, the 530 pairs breathable mesh with signature ABZORB midsole cushioning for everyday comfort.</p>
+          </figcaption>
+        </figure>
+
+        <!-- Card 2 (Middle Center) -->
+        <figure class="gallery-card card-mid" tabindex="0">
+          <img
+            src="assets/gallery-992.jpg"
+            alt="New Balance 992 Teal and Brown Suede"
+            class="gallery-img zoomable-img"
+            data-caption="New Balance 992 — Debuted in 2006 to celebrate the brand's 100th anniversary, handcrafted in the USA with premium pigskin suede."
+          />
+          <figcaption class="shoe-history-overlay">
+            <h4>New Balance 992 (2006)</h4>
+            <p>Released in 2006 to mark the company's centennial milestone, the 992 became an icon of American craftsmanship with layered suede and SBS cushioning.</p>
+          </figcaption>
+        </figure>
+
+        <!-- Card 3 (Bottom Right) -->
+        <figure class="gallery-card card-bottom" tabindex="0">
+          <img
+            src="assets/gallery-9060.jpg"
+            alt="New Balance 9060 Slate Blue"
+            class="gallery-img zoomable-img"
+            data-caption="New Balance 9060 — A modern reinterpretation of classic 99X heritage models, blending Y2K tech-runner aesthetics with sculpted dual-density pods."
+          />
+          <figcaption class="shoe-history-overlay">
+            <h4>New Balance 9060 (2022)</h4>
+            <p>Drawing inspiration from the storied 99X series and early-2000s running aesthetics, the 9060 exaggerates classic proportions with sculpted dual-density midsoles.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal for Interaction #6 (Click to Zoom & Enlarge) -->
+  <div id="lightbox-modal" class="lightbox-modal hidden" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close enlarged image">✕</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="" />
+      <p id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- Visual Simulation Toast for Search / Profile Icons -->
+  <div id="sim-toast" class="sim-toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

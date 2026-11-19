@@ -1,0 +1,621 @@
+/* =========================================================
+   CSS Variables & Reset
+   ========================================================= */
+:root {
+  --cream-bg: #f6e6ab;
+  --cream-glow: rgba(255, 245, 195, 0.95);
+  --black-bg: #050505;
+  --white-bg: #ffffff;
+  --text-dark: #1a1a1a;
+  --text-light: #f5f5f5;
+  --nb-red: #cf1f2e;
+  --border-gray: #222222;
+  --font-display: Impact, 'Arial Narrow Bold', 'Haettenschweiler', sans-serif;
+  --font-sans: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  background-color: var(--white-bg);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* =========================================================
+   Top Navigation Bar (Artboards 1 & 2)
+   ========================================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--white-bg);
+  border-bottom: 2px solid var(--border-gray);
+}
+
+.nav-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.brand-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.primary-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.primary-nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 1.15rem;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-dark);
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover,
+.icon-btn:focus-visible {
+  opacity: 0.65;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--text-dark);
+  padding: 0.25rem 0.6rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+/* =========================================================
+   ARTBOARD 1: Hero Section & Interaction #1 (Cream Glow)
+   ========================================================= */
+.hero-section {
+  background-color: var(--cream-bg);
+  min-height: 76vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.hero-inner {
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 2rem 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-media {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 6px;
+  transition: filter 0.35s ease, transform 0.35s ease;
+}
+
+/* Interaction #1: Cream Glow on Hover for First Page Images */
+.cream-glow-hover:hover,
+.cream-glow-hover:focus-visible {
+  filter: drop-shadow(0 0 28px var(--cream-glow)) drop-shadow(0 0 12px #fff8dc);
+  transform: scale(1.015);
+}
+
+.hero-copy h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5.4vw, 5.1rem);
+  line-height: 1.06;
+  letter-spacing: 0.02em;
+  color: #231f20;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+
+/* =========================================================
+   ARTBOARD 2: 3-Column Product Showcase
+   ========================================================= */
+.products-section {
+  background-color: var(--white-bg);
+  border-top: 1px solid var(--border-gray);
+}
+
+.products-grid {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.product-card {
+  padding: 1.5rem 1.25rem 2rem;
+  border-right: 1px solid var(--border-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card:last-child {
+  border-right: none;
+}
+
+.product-title {
+  font-size: 1.45rem;
+  font-weight: 400;
+  line-height: 1.3;
+  min-height: 3.8rem;
+  margin-bottom: 1rem;
+}
+
+.product-img-box {
+  background-color: var(--black-bg);
+  padding: 1.5rem 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.product-img {
+  width: 100%;
+  height: 360px;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.product-img:hover,
+.product-img:focus-visible {
+  transform: scale(1.03);
+}
+
+.product-price {
+  color: var(--white-bg);
+  font-size: 1.85rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* =========================================================
+   ARTBOARD 3: Tagline & Dark Footer (Interactions #2 & #4)
+   ========================================================= */
+.tagline-strip {
+  background-color: var(--white-bg);
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+}
+
+.tagline-strip p {
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-dark {
+  background-color: var(--black-bg);
+  color: var(--white-bg);
+  padding: 4.5rem 2rem 5.5rem;
+}
+
+.footer-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.25fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.footer-col h3 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.footer-trigger-link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.footer-trigger-link:hover,
+.footer-trigger-link:focus-visible {
+  transform: translateY(-4px);
+  opacity: 0.9;
+}
+
+.purpose-thumb {
+  width: 100%;
+  max-width: 340px;
+  height: 220px;
+  object-fit: cover;
+  border: 1px solid #333;
+}
+
+.red-nb-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.footer-manifesto h3.serif-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.55rem;
+  text-align: left;
+  letter-spacing: 0.03em;
+}
+
+.footer-manifesto p {
+  font-size: 1.3rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+  color: #f0f0f0;
+}
+
+/* =========================================================
+   ARTBOARD 4 VIEW: Our Purpose Standalone Page
+   ========================================================= */
+.standalone-view {
+  min-height: 100vh;
+}
+
+.artboard4-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.artboard4-copy p {
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+.back-home-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.65rem 1.25rem;
+  border: 1px solid var(--text-dark);
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.back-home-btn.dark-btn {
+  border-color: var(--white-bg);
+  color: var(--white-bg);
+}
+
+/* =========================================================
+   ARTBOARD 5 VIEW: Staggered Gallery & Interaction #5
+   ========================================================= */
+#artboard-5-view {
+  background-color: var(--black-bg);
+  color: var(--white-bg);
+  padding: 2rem;
+}
+
+.artboard5-container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.artboard5-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.staggered-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.gallery-card {
+  position: relative;
+  background-color: #f4f4f4;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+/* Staggered vertical offsets matching Artboard 5 */
+.card-top {
+  margin-top: 0;
+}
+
+.card-mid {
+  margin-top: 7rem;
+}
+
+.card-bottom {
+  margin-top: 14rem;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.gallery-card:hover .gallery-img,
+.gallery-card:focus-within .gallery-img {
+  transform: scale(1.04);
+}
+
+/* Interaction #5: Shoe Details & History Overlay on Hover/Focus */
+.shoe-history-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.86);
+  color: var(--white-bg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.gallery-card:hover .shoe-history-overlay,
+.gallery-card:focus-within .shoe-history-overlay {
+  opacity: 1;
+}
+
+.shoe-history-overlay h4 {
+  color: var(--cream-bg);
+  font-size: 1.25rem;
+  margin-bottom: 0.65rem;
+}
+
+.shoe-history-overlay p {
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   Interaction #6: Zoom Lightbox Modal
+   ========================================================= */
+.zoomable-img {
+  cursor: zoom-in;
+}
+
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lightbox-content {
+  max-width: 90vw;
+  max-height: 88vh;
+  text-align: center;
+}
+
+.lightbox-content img {
+  max-height: 76vh;
+  width: auto;
+  margin: 0 auto;
+  border: 2px solid #444;
+  background: #111;
+}
+
+.lightbox-content p {
+  color: var(--white-bg);
+  margin-top: 1rem;
+  font-size: 1.05rem;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: var(--white-bg);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* =========================================================
+   Toast Notification
+   ========================================================= */
+.sim-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 500;
+}
+
+.sim-toast.visible {
+  opacity: 1;
+}
+
+/* =========================================================
+   Responsive Design (Mobile & Tablet)
+   ========================================================= */
+@media (max-width: 960px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 2.5rem;
+  }
+
+  .hero-media {
+    order: 2;
+  }
+
+  .hero-copy {
+    order: 1;
+  }
+
+  .products-grid,
+  .footer-grid,
+  .staggered-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    border-right: none;
+    border-bottom: 1px solid var(--border-gray);
+  }
+
+  .card-mid,
+  .card-bottom {
+    margin-top: 0;
+  }
+
+  .footer-manifesto h3.serif-italic {
+    text-align: center;
+  }
+
+  .footer-manifesto p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: inline-block;
+  }
+
+  .primary-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white-bg);
+    border-bottom: 2px solid var(--border-gray);
+    padding: 1rem 2rem;
+  }
+
+  .primary-nav.open {
+    display: block;
+  }
+
+  .primary-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+/* =========================================================
+   Cropped Brand Logo Image Sizing
+   ========================================================= */
+.nav-logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.red-nb-logo-img {
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 1rem;
+}
+
+.artboard4-logo-img {
+  width: 220px;
+  height: auto;
+  object-fit: contain;
+}
+
+.artboard5-logo-img {
+  width: 115px;
+  height: auto;
+  object-fit: contain;
+}
