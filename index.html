@@ -12,8 +12,11 @@
   <header class="site-header" id="top-nav">
     <div class="nav-container">
       <div class="nav-left">
-        <a href="#artboard-1" class="brand-logo" aria-label="New Balance Home">
-          <img src="assets/nb-logo-black.png" alt="New Balance Logo" class="nav-logo-img" />
+        <a href="#artboard-1" class="brand-logo" aria-label="Brand Home">
+          <!-- Placeholder NB Mark -->
+          <svg class="nb-svg-logo" viewBox="0 0 120 60" width="68" height="34" aria-hidden="true">
+            <text x="5" y="48" font-family="Impact, sans-serif" font-style="italic" font-weight="900" font-size="52" fill="#1a1a1a">NB</text>
+          </svg>
         </a>
 
         <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle Navigation">
@@ -56,12 +59,12 @@
         <div class="hero-media">
           <!-- Interaction #1 (Cream Glow on Hover) + Interaction #6 (Click to Zoom) -->
           <img
-            src="assets/hero-athlete.png"
-            alt="Athlete holding white New Balance basketball sneakers with a basketball over shoulder"
+            src="assets/hero-athlete-placeholder.svg"
+            alt="Athlete holding white basketball sneakers with a basketball over shoulder"
             class="hero-img cream-glow-hover zoomable-img"
             tabindex="0"
             role="button"
-            data-caption="When Struggling, Find Your Balance, A New Balance"
+            data-caption="Hero Campaign Visual"
           />
         </div>
         <div class="hero-copy">
@@ -78,17 +81,17 @@
     <!-- ARTBOARD 2: 3-Column Footwear Showcase -->
     <section id="artboard-2" class="products-section" aria-label="Featured Footwear">
       <div class="products-grid">
-        <!-- Column 1 -->
+        <!-- Column 1: Mapped to uploaded shoe-9060r.png -->
         <article class="product-card">
           <h2 class="product-title">New Balance Unisex 9060R<br />Mens Sneakers</h2>
           <div class="product-img-box">
             <img
-              src="assets/shoe9060r.png"
+              src="shoe-9060r.png"
               alt="New Balance Unisex 9060R Black and White Sneakers"
               class="product-img zoomable-img"
               tabindex="0"
               role="button"
-              data-caption="New Balance Unisex 9060R Mens Sneakers — $160"
+              data-caption="New Balance Unisex 9060R — $160"
             />
             <p class="product-price">$160</p>
           </div>
@@ -99,23 +102,23 @@
           <h2 class="product-title">New BALANCE 530</h2>
           <div class="product-img-box">
             <img
-              src="assets/shoe-530.png"
+              src="assets/shoe-530-placeholder.svg"
               alt="New Balance 530 White and Silver Sneakers"
               class="product-img zoomable-img"
               tabindex="0"
               role="button"
-              data-caption="New BALANCE 530 — $109–$126"
+              data-caption="New Balance 530 — $109–$126"
             />
             <p class="product-price">$109–$126</p>
           </div>
         </article>
 
-        <!-- Column 3 -->
+        <!-- Column 3: Mapped to uploaded shoes.png -->
         <article class="product-card">
           <h2 class="product-title">New Balance 9060</h2>
           <div class="product-img-box">
             <img
-              src="assets/shoe-9060.png"
+              src="shoes.png"
               alt="New Balance 9060 Grey and Black Sneakers"
               class="product-img zoomable-img"
               tabindex="0"
@@ -136,7 +139,7 @@
 
       <div class="footer-dark">
         <div class="footer-grid">
-          <!-- Left Column: Our Purpose (Interaction #4: Opens Artboard 4 in new tab; Excluded from Interaction #6 zoom) -->
+          <!-- Left Column: Our Purpose (Mapped to uploaded man in shoes.png) -->
           <div class="footer-col">
             <h3>Our purpose</h3>
             <a
@@ -147,14 +150,14 @@
               aria-label="Open Our Purpose page in a new tab"
             >
               <img
-                src="assets/our-purpose.jpg"
-                alt="Street style New Balance sneakers standing near a colorful mural"
+                src="man in shoes.png"
+                alt="Street style sneakers standing near a colorful mural"
                 class="purpose-thumb no-zoom"
               />
             </a>
           </div>
 
-          <!-- Center Column: Gallery / Red NB Logo (Interaction #2: Opens Artboard 5 in new tab; Excluded from Interaction #6 zoom) -->
+          <!-- Center Column: Gallery / Red NB Logo (Mapped to uploaded red new balance logo pt2.png) -->
           <div class="footer-col">
             <h3>Gallary</h3>
             <a
@@ -165,9 +168,10 @@
               aria-label="Open Shoe Gallery in a new tab"
             >
               <img
-                src="assets/nb-logo-red.png"
+                src="red new balance logo pt2.png"
                 alt="Red New Balance Logo linking to Gallery"
-                class="red-nb-logo-img no-zoom"
+                class="no-zoom"
+                style="width: 220px; height: auto; margin-top: 1rem;"
               />
             </a>
           </div>
@@ -189,15 +193,20 @@
   <section id="artboard-4-view" class="standalone-view hidden" aria-label="Our Purpose Statement">
     <div class="artboard4-container">
       <div class="artboard4-logo">
-        <img src="assets/nb-logo-red-whitebg.png" alt="Red New Balance Logo" class="artboard4-logo-img" />
+        <!-- Mapped to uploaded red new balance logo pt2.png -->
+        <img
+          src="red new balance logo pt2.png"
+          alt="Red New Balance Logo"
+          style="width: 220px; height: auto;"
+        />
       </div>
       <div class="artboard4-copy">
         <p>
-          Our mission reflects over a century of independent craftsmanship and dedication to athletic
-          excellence. We believe movement and sport bring communities together through fairness,
-          mutual respect, and open opportunity for everyone. By expanding access to active lifestyles
-          and local youth programs, our athletes, team members, and partners work together to spark
-          lasting positive impact around the globe.
+          [Brand Purpose Statement Placeholder — Replace with your licensed brand manifesto copy]
+          Our mission reflects long-standing values of craftsmanship, independence, and community impact.
+          We strive to unite people through sport, respect, and fair play, helping shape an inclusive culture
+          where every voice is welcomed and heard. Every associate, athlete, and partner shares the
+          responsibility to champion active living and positive change in communities worldwide.
         </p>
       </div>
       <a href="index.html" class="back-home-btn">← Return to Main Page</a>
@@ -210,16 +219,21 @@
       <header class="artboard5-header">
         <a href="index.html" class="back-home-btn dark-btn">← Back to Main</a>
         <div class="artboard5-logo">
-          <img src="assets/nb-logo-red.png" alt="Red New Balance Logo" class="artboard5-logo-img" />
+          <!-- Mapped to uploaded red new balance logo pt2.png -->
+          <img
+            src="red new balance logo pt2.png"
+            alt="Red New Balance Logo"
+            style="width: 115px; height: auto;"
+          />
         </div>
       </header>
 
       <!-- Staggered 3-Card Gallery (Interaction #5 Hover Details + Interaction #6 Click Zoom) -->
       <div class="staggered-gallery">
-        <!-- Card 1 (Top Left) -->
+        <!-- Card 1 (Top Left): Mapped to uploaded shoe 1.png -->
         <figure class="gallery-card card-top" tabindex="0">
           <img
-            src="assets/gallery-530.jpg"
+            src="shoe 1.png"
             alt="New Balance 530 White and Silver"
             class="gallery-img zoomable-img"
             data-caption="New Balance 530 — Originally introduced in 1992 as a performance runner, revived as an everyday classic featuring ABZORB cushioning."
@@ -233,7 +247,7 @@
         <!-- Card 2 (Middle Center) -->
         <figure class="gallery-card card-mid" tabindex="0">
           <img
-            src="assets/gallery-992.jpg"
+            src="assets/gallery-992-placeholder.svg"
             alt="New Balance 992 Teal and Brown Suede"
             class="gallery-img zoomable-img"
             data-caption="New Balance 992 — Debuted in 2006 to celebrate the brand's 100th anniversary, handcrafted in the USA with premium pigskin suede."
@@ -247,7 +261,7 @@
         <!-- Card 3 (Bottom Right) -->
         <figure class="gallery-card card-bottom" tabindex="0">
           <img
-            src="assets/gallery-9060.jpg"
+            src="assets/gallery-9060-placeholder.svg"
             alt="New Balance 9060 Slate Blue"
             class="gallery-img zoomable-img"
             data-caption="New Balance 9060 — A modern reinterpretation of classic 99X heritage models, blending Y2K tech-runner aesthetics with sculpted dual-density pods."
